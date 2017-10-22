@@ -1,0 +1,14 @@
+c:\users\werne\documents\visual studio 2015\Projects\OrdenesdeCompraWerner\OrdenesdeCompraWerner\bin\Debug\OrdenesdeCompraWerner.exe.config
+D:\OrdenesdeCompraWerner\OrdenesdeCompraWerner\bin\Debug\OrdenesdeCompraWerner.exe.config
+D:\OrdenesdeCompraWerner\OrdenesdeCompraWerner\bin\Debug\OrdenesdeCompraWerner.exe
+D:\OrdenesdeCompraWerner\OrdenesdeCompraWerner\bin\Debug\OrdenesdeCompraWerner.pdb
+D:\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.csprojResolveAssemblyReference.cache
+D:\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.Properties.Resources.resources
+D:\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.csproj.GenerateResource.Cache
+D:\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.csproj.CoreCompileInputs.cache
+D:\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.exe
+D:\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.pdb
+D:\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.Catalogos.resources
+D:\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.GenerarOC.resources
+D:\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.OC.resources
+D:\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.Ver_solicitudes.resources
