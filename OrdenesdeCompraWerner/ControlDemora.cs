@@ -10,28 +10,23 @@ using System.Windows.Forms;
 using System.Data.Odbc;
 namespace OrdenesdeCompraWerner
 {
-    public partial class Ver_solicitudes : Form
+    public partial class ControlDemora : Form
     {
         string MyConnection2 = "Driver ={ MySQL ODBC 3.51 Driver }; Dsn=hotelsancarlos; UID=root; PWD=1234; Database=hotelsancarlosv2; ";
 
-        public Ver_solicitudes()
+        public ControlDemora()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Ver_solicitudes_Load(object sender, EventArgs e)
+        private void ControlDemora_Load(object sender, EventArgs e)
         {
 
             try
             {
 
                 //Display query  
-                string Query = "select * from hotelsancarlosv2.ordenesdecompra";
+                string Query = "select * from hotelsancarlosv2.controldevolucion";
                 OdbcConnection MyConn2 = new OdbcConnection(MyConnection2);
                 OdbcCommand MyCommand2 = new OdbcCommand(Query, MyConn2);
                 //  MyConn2.Open();  

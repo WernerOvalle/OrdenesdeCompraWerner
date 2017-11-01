@@ -28,5 +28,11 @@ namespace OrdenesdeCompraWerner
             Ver_solicitudes f2 = new Ver_solicitudes();
             f2.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ControlDemora f5 = new ControlDemora();
+            f5.Show();
+        }
     }
 }

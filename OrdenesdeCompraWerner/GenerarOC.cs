@@ -32,5 +32,11 @@ namespace OrdenesdeCompraWerner
             Catalogos f3 = new Catalogos();
             f3.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CapturaOrden f4 = new CapturaOrden();
+            f4.Show();
+        }
     }
 }
