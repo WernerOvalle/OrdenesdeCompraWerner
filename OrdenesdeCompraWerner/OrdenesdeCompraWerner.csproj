@@ -84,6 +84,9 @@
     <Compile Include="Ver solicitudes.Designer.cs">
       <DependentUpon>Ver solicitudes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CapturaOrden.resx">
+      <DependentUpon>CapturaOrden.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos.resx">
       <DependentUpon>Catalogos.cs</DependentUpon>
     </EmbeddedResource>

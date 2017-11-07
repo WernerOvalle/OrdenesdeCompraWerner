@@ -128,8 +128,8 @@ namespace OrdenesdeCompraWerner
                 da3.Fill(dt3);
 
 
-                comboBox2.ValueMember = "nombreProveedor";
-                comboBox2.DisplayMember = "nombreProveedor";
+                comboBox2.ValueMember = "idProveedores";
+                comboBox2.DisplayMember = "idProveedores";
 
                 comboBox2.DataSource = dt3;
             }
@@ -153,6 +153,95 @@ namespace OrdenesdeCompraWerner
         }
 
         private void comboBox3_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
+
+          
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string sql = @"SELECT nombreProveedor FROM proveedores WHERE idProveedores =  '" + comboBox2.Text + "'";
+            string sql2 = @"SELECT direccion FROM proveedores WHERE idProveedores =  '" + comboBox2.Text + "'";
+            string sql3 = @"SELECT representante FROM proveedores WHERE idProveedores =  '" + comboBox2.Text + "'";
+
+            OdbcConnection conector = new OdbcConnection("Driver ={ MySQL ODBC 3.51 Driver }; Dsn=hotelsancarlos; UID=root; PWD=1234; Database=hotelsancarlosv2; ");
+            conector.Open();
+
+
+
+
+            OdbcCommand cmd5 = new OdbcCommand(sql, conector);
+            string txtnombrep = Convert.ToString(cmd5.ExecuteScalar());
+
+
+            textBox5.Text = txtnombrep;
+            OdbcCommand cmd3 = new OdbcCommand(sql2, conector);
+            string txtdireccion = Convert.ToString(cmd3.ExecuteScalar());
+
+
+            textBox2.Text = txtdireccion;
+            OdbcCommand cmd4 = new OdbcCommand(sql3, conector);
+            string txtrepresentante = Convert.ToString(cmd4.ExecuteScalar());
+
+
+            textBox1.Text = txtrepresentante;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+            Globales.departamento = comboBox1.Text;
+            Globales.producto = textBox4.Text;
+            Globales.precio = textBox3.Text;
+            Globales.proveedor = textBox5.Text;
+            Globales.direccion = textBox2.Text;
+            Globales.representante = textBox1.Text;
+            Globales.cantidad = textBox6.Text;
+     
+            try
+            {
+                //This is my connection string i have assigned the database file address path  
+                string MyConnection2 = "Driver ={ MySQL ODBC 3.51 Driver }; Dsn=hotelsancarlos; UID=root; PWD=1234; Database=hotelsancarlosv2; ";
+                //This is my insert query in which i am taking input from the user through windows forms  
+                string Query = "insert into hotelsancarlosv2.ORDENESDECOMPRA(id_oc,idProveedores,idProducto,cantidad,categoria) values('" + Globales.oc + "','" + this.comboBox2.Text + "','" + this.comboBox3.Text + "','" + Globales.cantidad + "','" + Globales.departamento + "');";
+                //This is  MySqlConnection here i have created the object and pass my connection string.  
+                OdbcConnection MyConn2 = new OdbcConnection(MyConnection2);
+                //This is command class which will handle the query and connection object.  
+                OdbcCommand MyCommand2 = new OdbcCommand(Query, MyConn2);
+                OdbcDataReader MyReader2;
+                MyConn2.Open();
+                MyReader2 = MyCommand2.ExecuteReader();     // Here our query will be executed and data saved into the database.  
+                MessageBox.Show("DATOS GUARDADOS");
+                while (MyReader2.Read())
+                {
+                }
+                MyConn2.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

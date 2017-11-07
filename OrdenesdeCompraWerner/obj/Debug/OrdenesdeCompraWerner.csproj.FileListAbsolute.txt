@@ -26,3 +26,4 @@ C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\
 C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.exe
 C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.pdb
 C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.ControlDemora.resources
+C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.CapturaOrden.resources
