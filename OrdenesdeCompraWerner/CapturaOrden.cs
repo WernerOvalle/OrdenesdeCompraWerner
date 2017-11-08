@@ -56,11 +56,17 @@ namespace OrdenesdeCompraWerner
 
         private void CapturaOrden_Load(object sender, EventArgs e)
         {
+           
+
+
+           
             try
             {
                 string MyConnection2 = "Driver ={ MySQL ODBC 3.51 Driver }; Dsn=hotelsancarlos; UID=root; PWD=1234; Database=hotelsancarlosv2; ";
                 //Display query  
-                string Query = "SELECT productos.descripcion, productos.precio, ordenesdecompra.cantidad FROM ordenesdecompra, productos WHERE productos.idProducto= ordenesdecompra.idProducto;";
+                int idoc = Globales.oc ;
+                //MessageBox.Show(Convert.ToString(idoc));
+                string Query = "SELECT productos.descripcion, productos.precio, ordenesdecompra.cantidad FROM ordenesdecompra, productos WHERE productos.idProducto= ordenesdecompra.idProducto  and ordenesdecompra.id_oc='" + idoc + "';";
                 OdbcConnection MyConn2 = new OdbcConnection(MyConnection2);
                 OdbcCommand MyCommand2 = new OdbcCommand(Query, MyConn2);
                 //  MyConn2.Open();  
@@ -70,7 +76,7 @@ namespace OrdenesdeCompraWerner
                 DataTable dTable = new DataTable();
                 MyAdapter.Fill(dTable);
                 dataGridView1.DataSource = dTable; // here i have assign dTable object to the dataGridView1 object to display data.               
-                                                   // MyConn2.Close();  
+                                                 // MyConn2.Close();  
             }
             catch (Exception ex)
             {

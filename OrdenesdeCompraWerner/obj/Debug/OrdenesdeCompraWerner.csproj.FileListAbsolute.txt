@@ -22,8 +22,11 @@ C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\
 C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.Properties.Resources.resources
 C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.Ver_solicitudes.resources
 C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.csproj.GenerateResource.Cache
-C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.csproj.CoreCompileInputs.cache
 C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.exe
 C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.pdb
 C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.ControlDemora.resources
 C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.CapturaOrden.resources
+C:\Users\werne\Documents\Github\OrdenesDeCompraWerner\OrdenesdeCompraWerner\bin\Debug\Navegador.dll
+C:\Users\werne\Documents\Github\OrdenesDeCompraWerner\OrdenesdeCompraWerner\bin\Debug\MySql.Data.dll
+C:\Users\werne\Documents\Github\OrdenesDeCompraWerner\OrdenesdeCompraWerner\bin\Debug\Navegador.pdb
+C:\Users\werne\Documents\Github\OrdenesDeCompraWerner\OrdenesdeCompraWerner\bin\Debug\MySql.Data.xml
