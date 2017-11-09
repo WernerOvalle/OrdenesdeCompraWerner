@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlmacenarOCRealizadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlmacenarOCRealizadas.Designer.cs">
+      <DependentUpon>AlmacenarOCRealizadas.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapturaOrden.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="Ver solicitudes.Designer.cs">
       <DependentUpon>Ver solicitudes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AlmacenarOCRealizadas.resx">
+      <DependentUpon>AlmacenarOCRealizadas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapturaOrden.resx">
       <DependentUpon>CapturaOrden.cs</DependentUpon>
     </EmbeddedResource>

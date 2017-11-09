@@ -26,7 +26,7 @@ C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\
 C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.pdb
 C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.ControlDemora.resources
 C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.CapturaOrden.resources
-C:\Users\werne\Documents\Github\OrdenesDeCompraWerner\OrdenesdeCompraWerner\bin\Debug\Navegador.dll
 C:\Users\werne\Documents\Github\OrdenesDeCompraWerner\OrdenesdeCompraWerner\bin\Debug\MySql.Data.dll
 C:\Users\werne\Documents\Github\OrdenesDeCompraWerner\OrdenesdeCompraWerner\bin\Debug\Navegador.pdb
 C:\Users\werne\Documents\Github\OrdenesDeCompraWerner\OrdenesdeCompraWerner\bin\Debug\MySql.Data.xml
+C:\Users\werne\Documents\Github\OrdenesDeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.AlmacenarOCRealizadas.resources

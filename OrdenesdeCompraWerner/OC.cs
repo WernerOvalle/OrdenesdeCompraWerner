@@ -34,5 +34,12 @@ namespace OrdenesdeCompraWerner
             ControlDemora f5 = new ControlDemora();
             f5.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AlmacenarOCRealizadas f6 = new AlmacenarOCRealizadas();
+            f6.Show();
+
+        }
     }
 }
