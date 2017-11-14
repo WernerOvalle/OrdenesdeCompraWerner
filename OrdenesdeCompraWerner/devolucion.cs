@@ -9,24 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
 using System.Drawing.Imaging;
-
 namespace OrdenesdeCompraWerner
 {
-    public partial class CapturaOrden : Form
+    public partial class devolucion : Form
     {
-        public CapturaOrden()
+        public devolucion()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void label13_Click(object sender, EventArgs e)
@@ -34,39 +23,15 @@ namespace OrdenesdeCompraWerner
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void devolucion_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CapturaOrden_Load(object sender, EventArgs e)
-        {
-           
-
-
-           
             try
             {
                 string MyConnection2 = "Driver ={ MySQL ODBC 3.51 Driver }; Dsn=hotelsancarlos; UID=root; PWD=1234; Database=hotelsancarlosv2; ";
                 //Display query  
-                int idoc = Globales.oc ;
+               
                 //MessageBox.Show(Convert.ToString(idoc));
-                string Query = "SELECT productos.descripcion, productos.precio, ordenesdecompra.cantidad FROM ordenesdecompra, productos WHERE productos.idProducto= ordenesdecompra.idProducto  and ordenesdecompra.id_oc='" + idoc + "';";
+                string Query = "SELECT productos.descripcion, productos.precio, ordenesdecompra.cantidad FROM ordenesdecompra, productos WHERE productos.idProducto= ordenesdecompra.idProducto  and ordenesdecompra.id_oc='" + Globales2.oc + "';";
                 OdbcConnection MyConn2 = new OdbcConnection(MyConnection2);
                 OdbcCommand MyCommand2 = new OdbcCommand(Query, MyConn2);
                 //  MyConn2.Open();  
@@ -76,7 +41,7 @@ namespace OrdenesdeCompraWerner
                 DataTable dTable = new DataTable();
                 MyAdapter.Fill(dTable);
                 dataGridView1.DataSource = dTable; // here i have assign dTable object to the dataGridView1 object to display data.               
-                                                 // MyConn2.Close();  
+                                                   // MyConn2.Close();  
             }
             catch (Exception ex)
             {
@@ -84,7 +49,7 @@ namespace OrdenesdeCompraWerner
             }
             double sumatoria = 0;
             double sumatoria2 = 0;
-           
+
             //Método con el que recorreremos todas las filas de nuestro Datagridview
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
@@ -97,37 +62,44 @@ namespace OrdenesdeCompraWerner
                 sumatoria2 += Convert.ToDouble(row.Cells["precio"].Value);
             }
             //Por ultimo asignamos el resultado a el texto de nuestro Label
+            string sql = @"SELECT nombreProveedor FROM proveedores WHERE idProveedores =  '" + Globales2.proveedor + "'";
+            string sql2 = @"SELECT direccion FROM proveedores WHERE idProveedores =  '" + Globales2.proveedor + "'";
+            string sql3 = @"SELECT representante FROM proveedores WHERE idProveedores =  '" + Globales2.proveedor + "'";
+            
+            OdbcConnection conector = new OdbcConnection("Driver ={ MySQL ODBC 3.51 Driver }; Dsn=hotelsancarlos; UID=root; PWD=1234; Database=hotelsancarlosv2; ");
+            conector.Open();
 
-           label15.Text = Convert.ToString(sumatoria*sumatoria2);
-            label2.Text = Globales.proveedor;
-            label3.Text = Globales.direccion;
-            label5.Text = Globales.representante;
-            label9.Text = Globales.departamento;
+
+
+
+            OdbcCommand cmd5 = new OdbcCommand(sql, conector);
+            OdbcCommand cmd1 = new OdbcCommand(sql2, conector);
+            OdbcCommand cmd2 = new OdbcCommand(sql3, conector);
+           
+
+            label15.Text = Convert.ToString(sumatoria * sumatoria2);
+            label2.Text = Convert.ToString(cmd5.ExecuteScalar());
+            label3.Text = Convert.ToString(cmd1.ExecuteScalar());
+            label5.Text = Convert.ToString(cmd2.ExecuteScalar());
+            label9.Text = Globales2.departamento;
+            label17.Text = Convert.ToString(Globales2.nodevo);
             DateTime Hoy = DateTime.Today;
             string fecha_actual = Hoy.ToString("yyyy-MM-dd");
             label16.Text = fecha_actual;
-            label17.Text = Convert.ToString(Globales.oc);
 
         }
 
-        private void label15_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
-
             Image bmp = null;
-                Size sz = this.Size;
-                bmp = new Bitmap(sz.Width, sz.Height-50, PixelFormat.Format32bppRgb);
-                
-                Graphics memoryGraphics = Graphics.FromImage(bmp);
-                memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, sz,
-                                              CopyPixelOperation.SourceCopy);
+            Size sz = this.Size;
+            bmp = new Bitmap(sz.Width, sz.Height - 50, PixelFormat.Format32bppRgb);
 
-                bmp.Save("ORDEN DE COMPRA.bmp", ImageFormat.Bmp);
+            Graphics memoryGraphics = Graphics.FromImage(bmp);
+            memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, sz,
+                                          CopyPixelOperation.SourceCopy);
+
+            bmp.Save("DEVOLUCION.bmp", ImageFormat.Bmp);
 
             this.Hide();
         }

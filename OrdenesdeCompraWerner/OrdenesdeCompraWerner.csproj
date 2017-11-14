@@ -73,6 +73,12 @@
     <Compile Include="ControlDemora.Designer.cs">
       <DependentUpon>ControlDemora.cs</DependentUpon>
     </Compile>
+    <Compile Include="devolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="devolucion.Designer.cs">
+      <DependentUpon>devolucion.cs</DependentUpon>
+    </Compile>
     <Compile Include="OC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlDemora.resx">
       <DependentUpon>ControlDemora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="devolucion.resx">
+      <DependentUpon>devolucion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenerarOC.resx">
       <DependentUpon>GenerarOC.cs</DependentUpon>

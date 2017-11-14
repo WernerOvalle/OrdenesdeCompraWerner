@@ -26,7 +26,7 @@ namespace OrdenesdeCompraWerner
             {
 
                 //Display query  
-                string Query = "select * from hotelsancarlosv2.controldevolucion";
+                string Query = "select * from hotelsancarlosv2.controldemoras";
                 OdbcConnection MyConn2 = new OdbcConnection(MyConnection2);
                 OdbcCommand MyCommand2 = new OdbcCommand(Query, MyConn2);
                 //  MyConn2.Open();  
@@ -42,6 +42,27 @@ namespace OrdenesdeCompraWerner
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+          
+            
+
+                string Query  = "select * from hotelsancarlosv2.controldemoras WHERE id_oc  LIKE  '" + this.textBox1.Text + "'";
+
+
+                OdbcConnection MyConn2 = new OdbcConnection(MyConnection2);
+                OdbcCommand MyCommand2 = new OdbcCommand(Query, MyConn2);
+                //  MyConn2.Open();  
+                //For offline connection we weill use  MySqlDataAdapter class.  
+                OdbcDataAdapter MyAdapter = new OdbcDataAdapter();
+                MyAdapter.SelectCommand = MyCommand2;
+                DataTable dTable = new DataTable();
+                MyAdapter.Fill(dTable);
+                dataGridView1.DataSource = dTable;
+
+            
         }
     }
 }

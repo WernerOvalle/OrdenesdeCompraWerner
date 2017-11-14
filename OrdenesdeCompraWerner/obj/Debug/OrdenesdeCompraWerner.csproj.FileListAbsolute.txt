@@ -30,3 +30,5 @@ C:\Users\werne\Documents\Github\OrdenesDeCompraWerner\OrdenesdeCompraWerner\bin\
 C:\Users\werne\Documents\Github\OrdenesDeCompraWerner\OrdenesdeCompraWerner\bin\Debug\Navegador.pdb
 C:\Users\werne\Documents\Github\OrdenesDeCompraWerner\OrdenesdeCompraWerner\bin\Debug\MySql.Data.xml
 C:\Users\werne\Documents\Github\OrdenesDeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.AlmacenarOCRealizadas.resources
+C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.csproj.CoreCompileInputs.cache
+C:\Users\werne\Documents\Github\OrdenesdeCompraWerner\OrdenesdeCompraWerner\obj\Debug\OrdenesdeCompraWerner.devolucion.resources

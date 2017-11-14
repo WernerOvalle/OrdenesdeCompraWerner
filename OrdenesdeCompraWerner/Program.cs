@@ -20,6 +20,23 @@ namespace OrdenesdeCompraWerner
 
 
 
+
+    }
+    static class Globales2
+    {
+        public static string departamento;
+        public static int nodevo;
+        public static string precio;
+        public static string proveedor;
+        public static string representante;
+        public static string direccion;
+        public static string cantidad;
+        public static string oc;
+
+
+
+
+
     }
     static class Program
     {
